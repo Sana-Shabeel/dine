@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { League_Spartan } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { Box, Button, Heading } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Image } from "@chakra-ui/react";
+import HeroBanner from "@/componnets/HeroBanner";
 
 const LeagueSpartan = League_Spartan({ subsets: ["latin"] });
 
@@ -17,11 +16,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box
-        display="grid"
-        placeItems="center"
-        className={LeagueSpartan.className}
-      ></Box>
+      <main className={LeagueSpartan.className}>
+        <Box h={"100vh"} bg="#000">
+          <HeroBanner />
+        </Box>
+      </main>
     </>
   );
 }

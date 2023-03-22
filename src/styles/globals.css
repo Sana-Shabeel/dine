@@ -1,0 +1,20 @@
+/* @media only screen and (max-width: 30em) {
+  .hero-bg {
+    height: 100vh;
+    background-image: url("/assets/homepage/hero-bg-tablet@2x.jpg");
+    object-fit: contain;
+    object-position: center;
+    border: 10px solid yellow;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .hero-bg {
+    background-image: url("/assets/homepage/hero-bg-tablet@2x.jpg");
+  }
+}
+@media only screen and (max-width: 62em) {
+  .hero-bg {
+    background-image: url("/assets/homepage/hero-bg-desktop@2x.jpg");
+  }
+} 
+*/
