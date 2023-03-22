@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import { Button } from "./button";
 
 // 2. Extend the theme to include custom colors, fonts, etc
 export const theme = extendTheme({
@@ -10,5 +11,8 @@ export const theme = extendTheme({
       ebonyclay: "#242b37",
       shuttlegray: "#5c6779",
     },
+  },
+  components: {
+    Button,
   },
 });
