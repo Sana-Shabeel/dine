@@ -5,16 +5,10 @@ export const Button: ComponentStyleConfig = {
     width: "15.3125rem",
     border: "none",
     borderRadius: "none",
-    fontWeight: "400",
+    fontWeight: "600",
     fontSize: "17px",
     letterSpacing: "2.5px",
     textTransform: "uppercase",
-  },
-
-  sizes: {
-    lg: {
-      height: "64px",
-    },
   },
 
   variants: {
@@ -28,8 +22,8 @@ export const Button: ComponentStyleConfig = {
     outline: {
       color: "#111111",
       bg: "transparent",
-      border: "2px solid white",
-      transition: "box-shadow 0.25s ease-in-out",
+      border: "1px solid white",
+      transition: "0.45s ease-in-out",
 
       _hover: {
         color: "#111111",
