@@ -17,9 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={LeagueSpartan.className}>
-        <Box h={"100vh"} bg="#000">
-          <HeroBanner />
-        </Box>
+        <HeroBanner />
       </main>
     </>
   );
