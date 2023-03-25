@@ -2,6 +2,7 @@ import Head from "next/head";
 import { League_Spartan } from "next/font/google";
 import { Box, Button, Flex, Heading, Image } from "@chakra-ui/react";
 import HeroBanner from "@/componnets/HeroBanner";
+import EnjoyablePlace from "@/componnets/EnjoyablePlace";
 
 const LeagueSpartan = League_Spartan({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
       <main className={LeagueSpartan.className}>
         <HeroBanner />
+        <EnjoyablePlace />
       </main>
     </>
   );
