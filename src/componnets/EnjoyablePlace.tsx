@@ -13,7 +13,7 @@ const EnjoyablePlace = () => {
         gap={{ base: "2rem", xl: "12rem" }}
         marginTop="2rem"
       >
-        <picture>
+        <picture className="img-shadow">
           <source
             media="(min-width: 1440px)"
             srcSet="/assets/homepage/enjoyable-place-desktop.jpg 1440w,
