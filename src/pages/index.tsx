@@ -4,6 +4,7 @@ import { Box, Button, Flex, Heading, Image } from "@chakra-ui/react";
 import HeroBanner from "@/componnets/HeroBanner";
 import EnjoyablePlace from "@/componnets/EnjoyablePlace";
 import LocallySourced from "@/componnets/LocallySourced";
+import Highlighted from "@/componnets/Highlighted/Highlighted";
 
 const LeagueSpartan = League_Spartan({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function Home() {
         <HeroBanner />
         <EnjoyablePlace />
         <LocallySourced />
+        <Highlighted />
       </main>
     </>
   );
