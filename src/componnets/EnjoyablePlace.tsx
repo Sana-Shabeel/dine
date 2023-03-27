@@ -5,12 +5,13 @@ const EnjoyablePlace = () => {
   return (
     <Box>
       <Flex
-        width={{ base: "20.5rem", md: "36rem", xl: "90%" }}
+        width={{ base: "20.5rem", md: "36rem", xl: "100%" }}
         marginInline="auto"
         flexDir={{ base: "column", xl: "row" }}
         justifyContent="center"
         alignItems="center"
-        gap="2rem"
+        gap={{ base: "2rem", xl: "12rem" }}
+        marginTop="2rem"
       >
         <picture>
           <source
@@ -33,10 +34,12 @@ const EnjoyablePlace = () => {
           />
         </picture>
         <Flex
+          width={{ xl: "445px" }}
+          // border="2px solid blue"
           flexDir={{ base: "column" }}
-          gap="1.5rem"
           justifyContent="center"
-          alignItems="center"
+          alignItems={{ base: "center", xl: "flex-start" }}
+          gap="1.5rem"
         >
           <Image
             width="4.5rem"
