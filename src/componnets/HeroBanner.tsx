@@ -1,4 +1,5 @@
 import { Flex, Heading, Box, Image, Text, Button } from "@chakra-ui/react";
+import { League_Spartan } from "next/font/google";
 import React from "react";
 
 const HeroBanner = () => {
@@ -37,12 +38,13 @@ const HeroBanner = () => {
         alignItems={{ base: "center", xl: "flex-start" }}
         marginLeft={{ xl: "10%" }}
         gap="2.5rem"
-        padding={{
-          base: "15rem 0",
-          md: "25rem 0",
-          lg: "28rem 0",
-          xl: "17rem 0",
+        paddingTop={{
+          base: "15rem",
+          md: "25rem",
+          lg: "28rem",
+          xl: "17rem",
         }}
+        paddingBottom={{ "2xl": "8rem" }}
       >
         <Image
           position={{ xl: "absolute" }}
@@ -61,10 +63,11 @@ const HeroBanner = () => {
         >
           <Heading
             fontWeight="300"
-            fontSize={{ base: "2rem", xl: "5rem" }}
+            fontSize={{ base: "3.1rem", md: "3.7rem", xl: "5rem" }}
             color="#ffffff"
             textAlign={{ base: "center", xl: "start" }}
             letterSpacing={{ base: "0.4px" }}
+            fontFamily="inherit"
           >
             Exquisite dining <br /> since 1989
           </Heading>
