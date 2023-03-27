@@ -43,6 +43,7 @@ const EnjoyablePlace = () => {
           justifyContent="center"
           alignItems={{ base: "center", xl: "flex-start" }}
           gap="1.5rem"
+          textAlign="center"
         >
           <Image
             width="4.5rem"
