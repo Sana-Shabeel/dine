@@ -3,7 +3,11 @@ import React from "react";
 
 const EnjoyablePlace = () => {
   return (
-    <Box>
+    <Box
+      backgroundImage={{ md: "/assets/patterns/pattern-curve-top-right.svg" }}
+      bgPos={{ md: "250% ", lg: "0 center" }}
+      bgRepeat="no-repeat"
+    >
       <Flex
         width={{ base: "20.5rem", md: "36rem", xl: "100%" }}
         marginInline="auto"
@@ -11,7 +15,7 @@ const EnjoyablePlace = () => {
         justifyContent="center"
         alignItems="center"
         gap={{ base: "2rem", xl: "12rem" }}
-        marginTop="2rem"
+        marginTop={{ base: "5rem", md: "2rem", lg: "5rem" }}
       >
         <picture className="img-shadow">
           <source
@@ -35,7 +39,6 @@ const EnjoyablePlace = () => {
         </picture>
         <Flex
           width={{ xl: "445px" }}
-          // border="2px solid blue"
           flexDir={{ base: "column" }}
           justifyContent="center"
           alignItems={{ base: "center", xl: "flex-start" }}
