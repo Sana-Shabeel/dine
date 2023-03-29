@@ -4,10 +4,12 @@ import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
 const HighlightedMenu = () => {
   return (
     <Flex
+      width={{ base: "20.5rem", md: "36rem" }}
       flexDir={{ base: "column", md: "row" }}
       justifyContent="center"
       alignItems={{ base: "center", xl: "flex-start" }}
       gap="10px"
+      marginInline="auto"
     >
       <picture>
         <source
