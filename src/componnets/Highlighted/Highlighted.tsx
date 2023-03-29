@@ -7,16 +7,16 @@ const Highlighted = () => {
     <Box bg="#000" color="#fff">
       <Flex
         flexDir={{ base: "column", xl: "row" }}
-        width={{ base: "20.5rem", md: "36rem" }}
-        marginInline="auto"
+        // width={{ base: "20.5rem", md: "36rem" }}
       >
         <Flex
+          width={{ base: "20.5rem", md: "27.8rem" }}
           flexDir={{ base: "column", xl: "row" }}
           justifyContent="center"
           alignItems={{ base: "center", xl: "flex-start" }}
           textAlign="center"
           gap="1.5rem"
-          m="4rem 0"
+          m="4rem auto"
         >
           <Image
             width="4.5rem"
