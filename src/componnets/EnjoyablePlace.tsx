@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import InfoSection from "./InfoSection";
 
 const EnjoyablePlace = () => {
   return (
@@ -7,6 +8,8 @@ const EnjoyablePlace = () => {
       backgroundImage={{ md: "/assets/patterns/pattern-curve-top-right.svg" }}
       bgPos={{ md: "250% ", lg: "0 center" }}
       bgRepeat="no-repeat"
+      // border="2px solid blue"
+      // marginTop="-10%"
     >
       <Flex
         width={{ base: "20.5rem", md: "36rem", xl: "100%" }}
@@ -15,7 +18,7 @@ const EnjoyablePlace = () => {
         justifyContent="center"
         alignItems="center"
         gap={{ base: "2rem", xl: "12rem" }}
-        marginTop={{ base: "5rem", md: "2rem", lg: "5rem" }}
+        marginTop={{ base: "-5rem", md: "-2rem", lg: "-5rem" }}
       >
         <picture className="img-shadow">
           <source
@@ -37,27 +40,13 @@ const EnjoyablePlace = () => {
             alt="mobile"
           />
         </picture>
-        <Flex
-          width={{ xl: "445px" }}
-          flexDir={{ base: "column" }}
-          justifyContent="center"
-          alignItems={{ base: "center", xl: "flex-start" }}
-          gap="1.5rem"
-          textAlign="center"
-        >
-          <Image
-            width="4.5rem"
-            src="/assets/patterns/pattern-divide.svg"
-            alt=""
-          />
-          <Heading fontSize={{ base: "2rem", md: "3rem" }}>
-            Enjoyable place <br /> for all the family
-          </Heading>
-          <Text fontSize={{ md: "1.25rem" }}>
-            Our relaxed surroundings make dining with us a great experience for
-            everyone. We can even arrange a tour of the farm before your meal.
-          </Text>
-        </Flex>
+
+        <InfoSection
+          header1="Enjoyable place"
+          header2="for all the family"
+          paragraph="Our relaxed surroundings make dining with us a great experience for
+            everyone. We can even arrange a tour of the farm before your meal."
+        />
       </Flex>
     </Box>
   );
