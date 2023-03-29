@@ -1,5 +1,6 @@
 import { Flex, Box, Image, Heading, Text } from "@chakra-ui/react";
 import React from "react";
+import InfoSection from "./InfoSection";
 
 const LocallySourced = () => {
   return (
@@ -17,28 +18,13 @@ const LocallySourced = () => {
         gap={{ base: "2rem", xl: "12rem" }}
         mt={{ base: "2rem" }}
       >
-        <Flex
-          width={{ xl: "445px" }}
-          flexDir={{ base: "column" }}
-          justifyContent="center"
-          alignItems={{ base: "center", xl: "flex-start" }}
-          gap="1.5rem"
-          textAlign="center"
-        >
-          <Image
-            width="4.5rem"
-            src="/assets/patterns/pattern-divide.svg"
-            alt="pattern divide"
-          />
-          <Heading fontSize={{ base: "2rem", md: "3rem" }}>
-            The most locally <br /> sourced food
-          </Heading>
-          <Text fontSize={{ md: "1.25rem" }}>
-            All our ingredients come directly from our farm or local fishery. So
-            you can be sure that you’re eating the freshest, most sustainable
-            food.
-          </Text>
-        </Flex>
+        <InfoSection
+          header1="The most locally"
+          header2="sourced food"
+          paragraph="All our ingredients come directly from our farm or local fishery. So
+          you can be sure that you’re eating the freshest, most sustainable
+          food."
+        />
 
         <Box pos="relative">
           <picture className="img-shadow">
