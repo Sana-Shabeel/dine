@@ -22,8 +22,8 @@ export default function Home() {
       <main className={LeagueSpartan.className}>
         <HeroBanner />
         <EnjoyablePlace />
-        {/* <LocallySourced />
-        <Highlighted /> */}
+        <LocallySourced />
+        {/* <Highlighted /> */}
       </main>
     </>
   );
