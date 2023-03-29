@@ -1,18 +1,10 @@
 import { Flex, Heading, Box, Image, Text, Button } from "@chakra-ui/react";
-import { League_Spartan } from "next/font/google";
 import React from "react";
 
 const HeroBanner = () => {
   return (
-    <>
-      <Box
-        position="absolute"
-        top="0"
-        left="0"
-        zIndex="-1"
-        height="100vh"
-        overflow="hidden"
-      >
+    <Box height="100vh" bg="codgray">
+      <Box>
         <picture>
           <source
             media="(min-width: 1440px)"
@@ -21,15 +13,21 @@ const HeroBanner = () => {
           />
           <source
             media="(min-width: 768px)"
-            srcSet="/assets/homepage/hero-bg-tablet.jpg 768w,
-            /assets/homepage/hero-bg-tablet@2x.jpg 1536w"
+            srcSet="/assets/homepage/hero-bg-tablet.jpg 768w"
           />
           <source
             srcSet="/assets/homepage/hero-bg-mobile.jpg 375w,
            /assets/homepage/hero-bg-mobile@2x.jpg 440w "
           />
 
-          <Image src="/assets/homepage/hero-bg-mobile@2x.jpg" alt="mobile" />
+          <Image
+            src="/assets/homepage/hero-bg-mobile@2x.jpg"
+            width="100vw"
+            objectFit="cover"
+            objectPosition="top"
+            height={{ base: "30vh", md: "40vh", lg: "50vh", xl: "100vh" }}
+            alt="mobile"
+          />
         </picture>
       </Box>
       <Flex
@@ -38,20 +36,12 @@ const HeroBanner = () => {
         alignItems={{ base: "center", xl: "flex-start" }}
         marginLeft={{ xl: "10%" }}
         gap="2.5rem"
-        paddingTop={{
-          base: "15rem",
-          md: "25rem",
-          lg: "28rem",
-          xl: "17rem",
-        }}
-        paddingBottom={{ "2xl": "8rem" }}
+        pos={{ xl: "absolute" }}
+        top="8%"
       >
         <Image
-          position={{ xl: "absolute" }}
-          top="8%"
-          left="11%"
           width={{ base: "5.125rem", xl: "6.4375rem" }}
-          height={{ base: "2rem", xl: "2.5rem" }}
+          marginBottom="15%"
           src="/assets/logo.svg"
           alt="logo"
         />
@@ -85,7 +75,7 @@ const HeroBanner = () => {
           </Button>
         </Flex>
       </Flex>
-    </>
+    </Box>
   );
 };
 
