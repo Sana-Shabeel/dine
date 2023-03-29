@@ -41,7 +41,7 @@ const HeroBanner = () => {
       >
         <Image
           width={{ base: "5.125rem", xl: "6.4375rem" }}
-          marginBottom="15%"
+          marginBottom={{ xl: "15%" }}
           src="/assets/logo.svg"
           alt="logo"
         />
