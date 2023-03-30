@@ -23,7 +23,7 @@ export default function Home() {
         <HeroBanner />
         <EnjoyablePlace />
         <LocallySourced />
-        {/* <Highlighted /> */}
+        <Highlighted />
       </main>
     </>
   );
