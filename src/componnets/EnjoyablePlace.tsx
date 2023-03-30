@@ -18,7 +18,7 @@ const EnjoyablePlace = () => {
         justifyContent="center"
         alignItems="center"
         gap={{ base: "2rem", xl: "12rem" }}
-        marginTop={{ base: "-5rem", md: "-2rem", lg: "-5rem" }}
+        marginTop={{ base: "-5rem", md: "-2rem", lg: "-2rem" }}
       >
         <picture className="img-shadow">
           <source
