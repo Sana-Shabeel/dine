@@ -50,7 +50,7 @@ const LocallySourced = () => {
           <Image
             display={{ base: "none", md: "unset" }}
             pos={{ md: "absolute" }}
-            right="-15%"
+            right="-13%"
             top={{ md: "70%", lg: "50%" }}
             width="9.5rem"
             src="/assets/patterns/pattern-lines.svg"
