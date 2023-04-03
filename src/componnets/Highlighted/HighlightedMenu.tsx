@@ -1,16 +1,20 @@
 import React from "react";
 import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
 
-const HighlightedMenu = () => {
+interface Props {
+  borderB?: Boolean;
+}
+
+const HighlightedMenu = ({ borderB }: Props) => {
   return (
     <Flex
-      width={{ base: "20.5rem", md: "573px", xl: "1110px" }}
+      width={{ base: "20.5rem", md: "35.82rem", xl: "33.75rem" }}
       flexDir={{ base: "column", md: "row" }}
       justifyContent="center"
-      alignItems={{ base: "center", xl: "flex-start" }}
-      gap="10px"
-      margin={{ base: " 3rem auto" }}
-      border="1px solid green"
+      alignItems="center"
+      gap="1rem"
+      marginBottom={{ base: "1.5rem", md: "1rem" }}
+      borderBottom={borderB ? "1px solid #333" : ""}
     >
       <Flex>
         <picture>
@@ -29,8 +33,19 @@ const HighlightedMenu = () => {
             alt="mobile"
           />
         </picture>
+        <Box
+          display={{ base: "none", md: "unset" }}
+          mt="1rem"
+          bg="#9E7F66"
+          w="2rem"
+          h="1px"
+        />
       </Flex>
-      <Box textAlign="center" padding="2rem 0">
+      <Box
+        width={{ md: "23.94rem", xl: "33.75rem" }}
+        textAlign={{ base: "center", md: "start" }}
+        padding="2rem 0"
+      >
         <Heading mb="0.9rem" fontSize="1.25rem">
           Seared Salmon Fillet
         </Heading>
