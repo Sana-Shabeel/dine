@@ -12,7 +12,7 @@ const Highlighted = () => {
         marginInline="auto"
         paddingTop="3rem"
       >
-        <Box width={{md:}}>
+        <Box>
           <InfoSection
             header1="A few highlights from"
             header2="our menu"
