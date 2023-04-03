@@ -8,20 +8,26 @@ const Highlighted = () => {
     <Box bg="#000" color="#fff">
       <Flex
         flexDir={{ base: "column", xl: "row" }}
-        width={{ base: "20.5rem", md: "36rem" }}
+        width={{ base: "20.5rem", md: "36rem", xl: "69.4rem" }}
         alignItems={{ base: "center", xl: "flex-start" }}
         marginInline="auto"
         paddingTop="3rem"
-        border="1px solid green"
+        gap="3rem"
       >
-        <InfoSection
-          header1="A few highlights from"
-          header2="our menu"
-          paragraph="We cater for all dietary requirements, but here’s a glimpse at some
-              of our diner’s favourites. Our menu is revamped every season."
-        />
+        <Box mt={{ xl: "2rem" }}>
+          <InfoSection
+            header1="A few highlights from"
+            header2="our menu"
+            paragraph="We cater for all dietary requirements, but here’s a glimpse at some
+                of our diner’s favourites. Our menu is revamped every season."
+          />
+        </Box>
 
-        <HighlightedMenu />
+        <Box>
+          <HighlightedMenu borderB />
+          <HighlightedMenu borderB />
+          <HighlightedMenu />
+        </Box>
       </Flex>
     </Box>
   );
