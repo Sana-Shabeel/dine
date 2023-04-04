@@ -5,6 +5,7 @@ import HeroBanner from "@/componnets/HeroBanner";
 import EnjoyablePlace from "@/componnets/EnjoyablePlace";
 import LocallySourced from "@/componnets/LocallySourced";
 import Highlighted from "@/componnets/Highlighted/Highlighted";
+import OurOffers from "@/componnets/OurOffers";
 
 const LeagueSpartan = League_Spartan({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function Home() {
         <EnjoyablePlace />
         <LocallySourced />
         <Highlighted />
+        <OurOffers />
       </main>
     </>
   );
