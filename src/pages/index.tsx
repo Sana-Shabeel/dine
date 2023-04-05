@@ -5,7 +5,7 @@ import HeroBanner from "@/componnets/HeroBanner";
 import EnjoyablePlace from "@/componnets/EnjoyablePlace";
 import LocallySourced from "@/componnets/LocallySourced";
 import Highlighted from "@/componnets/Highlighted/Highlighted";
-import OurOffers from "@/componnets/OurOffers";
+import OurOffers from "@/componnets/Offers/OurOffers";
 
 const LeagueSpartan = League_Spartan({ subsets: ["latin"] });
 
