@@ -6,6 +6,8 @@ import EnjoyablePlace from "@/componnets/EnjoyablePlace";
 import LocallySourced from "@/componnets/LocallySourced";
 import Highlighted from "@/componnets/Highlighted/Highlighted";
 import OurOffers from "@/componnets/Offers/OurOffers";
+import Footer from "@/componnets/Footer";
+import Ready from "@/componnets/Ready";
 
 const LeagueSpartan = League_Spartan({ subsets: ["latin"] });
 
@@ -26,6 +28,8 @@ export default function Home() {
         <LocallySourced />
         <Highlighted />
         <OurOffers />
+        <Ready />
+        <Footer />
       </main>
     </>
   );
