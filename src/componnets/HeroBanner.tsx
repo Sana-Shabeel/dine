@@ -37,7 +37,7 @@ const HeroBanner = () => {
         marginLeft={{ xl: "10%" }}
         gap="2.5rem"
         pos={{ xl: "absolute" }}
-        top="5%"
+        top="4%"
       >
         <Image
           width={{ base: "5.125rem", xl: "6.4375rem" }}
