@@ -9,14 +9,25 @@ export const Button: ComponentStyleConfig = {
     fontSize: "17px",
     letterSpacing: "2.5px",
     textTransform: "uppercase",
+    padding: "1.5em",
   },
 
   variants: {
     solid: {
       color: "white",
       bg: "#111111",
+      transition: "box-shadow 0.350s ease-in-out",
+      border: "1px solid #000",
+
       _hover: {
-        bg: "blue.400",
+        bg: "transparent",
+        color: "#000",
+        boxShadow: "inset 0 0 0 2em #f1f1f1",
+      },
+      _active: {
+        bg: "transparent",
+        color: "#000",
+        boxShadow: "inset 0 0 0 2em #f1f1f1",
       },
     },
     outline: {
