@@ -5,20 +5,40 @@ import OfferNavbar from "./OfferNavbar";
 interface Offer {
   title: string;
   msg: string;
+  src: {
+    xl: string;
+    md: string;
+    default: string;
+  };
 }
 
-const offers = [
+const offers: Offer[] = [
   {
     title: "Family Gathering",
     msg: "We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.",
+    src: {
+      xl: "/assets/homepage/family-gathering-desktop.jpg,  /assets/homepage/family-gathering-desktop@2x.jpg.jpg",
+      md: "/assets/homepage/family-gathering-tablet.jpg 573w, /assets/homepage/family-gathering-tablet@2x.jpg 1146w",
+      default: "/assets/homepage/family-gathering-mobile@2x.jpg",
+    },
   },
   {
     title: "Special Events",
     msg: "Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.",
+    src: {
+      xl: "/assets/homepage/special-events-desktop.jpg,  /assets/homepage/special-events-desktop@2x.jpg.jpg",
+      md: "/assets/homepage/special-events-tablet.jpg 573w, /assets/homepage/special-events-tablet@2x.jpg 1146w",
+      default: "/assets/homepage/special-events-mobile@2x.jpg",
+    },
   },
   {
     title: "Social Events",
     msg: "Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.",
+    src: {
+      xl: "/assets/homepage/social-events-desktop.jpg,  /assets/homepage/social-events-desktop@2x.jpg.jpg",
+      md: "/assets/homepage/social-events-tablet.jpg 573w, /assets/homepage/social-events-tablet@2x.jpg 1146w",
+      default: "/assets/homepage/social-events-mobile@2x.jpg",
+    },
   },
 ];
 
@@ -42,24 +62,21 @@ const OurOffers = () => {
         flexDir={{ base: "column", xl: "row" }}
         gap={{ base: "3px", xl: "4rem" }}
       >
-        <Box mt="10%">
+        <Box mt="10%" pos="relative">
           <picture className="img-shadow">
-            <source
-              media="(min-width: 1440px)"
-              srcSet="/assets/homepage/family-gathering-desktop.jpg, 
-              /assets/homepage/family-gathering-desktop@2x.jpg.jpg"
-            />
-            <source
-              media="(min-width: 768px)"
-              srcSet="/assets/homepage/family-gathering-tablet.jpg 573w,
-              /assets/homepage/family-gathering-tablet@2x.jpg 1146w"
-            />
-            <Image
-              src="/assets/homepage/family-gathering-mobile@2x.jpg"
-              alt="family gathering"
-            />
+            <source media="(min-width: 1440px)" srcSet={chosenOffer.src.xl} />
+            <source media="(min-width: 768px)" srcSet={chosenOffer.src.md} />
+            <Image src={chosenOffer.src.default} alt="family gathering" />
           </picture>
-          <Image src="" alt="" />
+          <Image
+            display={{ base: "none", md: "unset" }}
+            pos={{ md: "absolute" }}
+            left="-5%"
+            top="-10%"
+            width="9.5rem"
+            src="/assets/patterns/pattern-lines.svg"
+            alt="pattern lines"
+          />
         </Box>
 
         <Flex
@@ -101,7 +118,7 @@ const OurOffers = () => {
                   choseOffer={choseOffer}
                   title={offer}
                   chosenOffer={chosenOffer}
-                  key="idx"
+                  key={idx}
                 />
               )
             )}
