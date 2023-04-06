@@ -30,26 +30,25 @@ const Form = () => {
         alignItems={{ md: "center" }}
         gap="1rem"
       >
-        <Text width="40%" fontSize="1.25rem">
+        <Text width={{ base: "100%", md: "40%" }} fontSize="1.25rem">
           Pick a date
         </Text>
-        <Flex gap="1rem" width="50%">
+        <Flex gap="1rem" width={{ base: "100%", md: "50%" }}>
           <Input variant="flushed" pl="8px" placeholder="MM" />
           <Input variant="flushed" pl="8px" placeholder="DD" />
           <Input variant="flushed" pl="8px" placeholder="YYYY" />
         </Flex>
       </Flex>
-      <Flex gap="1rem">
-        <Text width="40%" fontSize="1.25rem">
+
+      <Flex gap="1rem" flexDirection={{ base: "column", md: "row" }}>
+        <Text width={{ base: "100%", md: "40%" }} fontSize="1.25rem">
           Pick a time
         </Text>
-        <Flex gap="1rem" width="50%">
+        <Flex gap="1rem" width={{ base: "100%", md: "50%" }}>
           <Input variant="flushed" pl="8px" placeholder="09" />
           <Input variant="flushed" pl="8px" placeholder="00" />
-          <Select variant="flushed" textAlign="center">
-            <option selected value="AM">
-              AM
-            </option>
+          <Select variant="flushed" textAlign="center" defaultValue="AM">
+            <option value="AM">AM</option>
             <option value="PM">PM</option>
           </Select>
         </Flex>
