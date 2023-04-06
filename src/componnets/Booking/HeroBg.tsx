@@ -3,42 +3,30 @@ import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 const HeroBg = () => {
   return (
-    <Box position="relative" height="600px" overflow="hidden">
-      <picture>
-        <source
-          media="(min-width: 1440px)"
-          srcSet="/assets/booking/hero-bg-desktop.jpg1440w,
-        /assets/booking/hero-bg-desktop@2x.jpg 2880w"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet="/assets/booking/hero-bg-tablet.jpg 768w,
-        /assets/booking/hero-bg-tablet@2x.jpg 1536w"
-        />
-        <source
-          srcSet="/assets/booking/hero-bg-mobile.jpg 375w,
-            /assets/booking/hero-bg-mobile@2x.jpg 440w"
-        />
-
-        <Image src="/assets/booking/hero-bg-mobile@2x.jpg" alt="mobile" />
-      </picture>
+    <Box
+      backgroundImage={{
+        base: "/assets/booking/hero-bg-mobile.jpg",
+        md: "/assets/booking/hero-bg-tablet.jpg ",
+        lg: "/assets/booking/hero-bg-tablet@2x.jpg",
+        xl: "/assets/booking/hero-bg-desktop@2x.jpg ",
+      }}
+      backgroundRepeat="no-repeat"
+      backgroundPosition={"center"}
+      backgroundSize="cover"
+      height="600px"
+      overflow="hidden"
+    >
       <Flex
-        width={{ base: "90%" }}
         flexDir="column"
         alignItems={{ base: "center", xl: "flex-start" }}
         gap="2rem"
+        width={{ base: "90%" }}
+        margin="4rem auto"
         textAlign={{ base: "center", xl: "start" }}
-        position="absolute"
-        top="40%"
-        left="50%"
-        transform="translate(-50%, -50%)"
         color="white"
       >
         <Image
           width={{ base: "5.125rem", md: "6.5rem", xl: "6.4375rem" }}
-          pos={{ md: "absolute", xl: "relative" }}
-          top="-70%"
-          left="0"
           mb={{ xl: "4rem" }}
           src="/assets/logo.svg"
           alt="logo"
