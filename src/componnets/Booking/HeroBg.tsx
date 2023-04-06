@@ -21,7 +21,7 @@ const HeroBg = () => {
         alignItems={{ base: "center", xl: "flex-start" }}
         gap="2rem"
         width={{ base: "90%" }}
-        margin="4rem auto"
+        margin={{ base: "4rem auto", xl: "8rem auto" }}
         textAlign={{ base: "center", xl: "start" }}
         color="white"
       >
