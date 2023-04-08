@@ -1,4 +1,5 @@
 import { Flex, Heading, Box, Image, Text, Button } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 const HeroBanner = () => {
@@ -70,9 +71,11 @@ const HeroBanner = () => {
             Experience our seasonal menu in beautiful country surroundings. Eat
             the freshest produce from the comfort of our farmhouse.
           </Text>
-          <Button variant="outline" color="#fff" padding="1.5rem 0">
-            book a table
-          </Button>
+          <Link href="/booking">
+            <Button variant="outline" color="#fff" padding="1.5rem 0">
+              book a table
+            </Button>
+          </Link>
         </Flex>
       </Flex>
     </Box>
