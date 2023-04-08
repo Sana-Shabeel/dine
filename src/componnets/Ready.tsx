@@ -1,4 +1,5 @@
 import { Box, Button, Flex, Heading, Image } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 const Ready = () => {
@@ -35,9 +36,11 @@ const Ready = () => {
         width={{ base: "90%" }}
       >
         <Heading>Ready to make a reservation?</Heading>
-        <Button variant="outline" color="#fff">
-          Book a table
-        </Button>
+        <Link href="/booking">
+          <Button variant="outline" color="#fff">
+            Book a table
+          </Button>
+        </Link>
       </Flex>
     </Box>
   );
