@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Flex, Box, Heading, Text, Image, Button } from "@chakra-ui/react";
 import OfferNavbar from "./OfferNavbar";
+import Link from "next/link";
 
 interface Offer {
   title: string;
@@ -101,9 +102,11 @@ const OurOffers = () => {
                 <Text>{chosenOffer.msg}</Text>
               </>
             }
-            <Button m="1rem 0" variant="solid">
-              BOOK A TABLE
-            </Button>
+            <Link href="/booking">
+              <Button m="1rem 0" variant="solid">
+                BOOK A TABLE
+              </Button>
+            </Link>
           </Flex>
           <Flex
             flexDir={{ base: "column", md: "row", xl: "column" }}
