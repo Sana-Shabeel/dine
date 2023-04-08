@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 
 const HeroBg = () => {
   return (
@@ -25,12 +33,14 @@ const HeroBg = () => {
         textAlign={{ base: "center", xl: "start" }}
         color="white"
       >
-        <Image
-          width={{ base: "5.125rem", md: "6.5rem", xl: "6.4375rem" }}
-          mb={{ xl: "4rem" }}
-          src="/assets/logo.svg"
-          alt="logo"
-        />
+        <Link href="/">
+          <Image
+            width={{ base: "5.125rem", md: "6.5rem", xl: "6.4375rem" }}
+            mb={{ xl: "4rem" }}
+            src="/assets/logo.svg"
+            alt="logo"
+          />
+        </Link>
         <Heading
           fontWeight="light"
           letterSpacing="-0.4px"
