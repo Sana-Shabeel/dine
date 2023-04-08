@@ -8,10 +8,12 @@ import {
   Text,
   Image,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import AddPeople from "./AddPeople";
 
 const Form = () => {
+  const [addPeople, setAddPeople] = useState<number>(0);
+
   return (
     <Box
       border="2px solid transparent"
@@ -69,7 +71,7 @@ const Form = () => {
             </Select>
           </Flex>
         </Flex>
-        <AddPeople />
+        <AddPeople setIncrement={setAddPeople} increment={addPeople} />
         <Button variant="solid">make reservation</Button>
       </Stack>
     </Box>
