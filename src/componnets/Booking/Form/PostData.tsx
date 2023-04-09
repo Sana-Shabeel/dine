@@ -115,15 +115,26 @@ const PostData = () => {
   };
 
   const postData = async () => {
-    setModal({ ...modal, isLoading: true });
+    try {
+      setModal({ ...modal, isLoading: true });
 
-    const data = await axios.post("/api/booking", bookingData);
+      const data = await axios.post("/api/booking", bookingData);
+      console.log("data ousti", data);
 
-    if (data.status === 201) {
+      if (data.status === 201) {
+        setModal({
+          open: true,
+          title: "Success",
+          message: `A table has been booked under the name ${bookingData.name}`,
+          isLoading: false,
+        });
+      }
+    } catch (error) {
+      console.log("data  inside", error);
       setModal({
         open: true,
-        title: "Success",
-        message: `A table has been booked under the name ${bookingData.name}`,
+        title: "Error",
+        message: "Something went wrong. Please try again later",
         isLoading: false,
       });
     }
