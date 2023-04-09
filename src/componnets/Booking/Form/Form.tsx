@@ -13,121 +13,27 @@ import React, { useState } from "react";
 import AddPeople from "./AddPeople";
 import PickTime from "./PickTime";
 
-interface DateTime {
-  date: {
-    mm: string;
-    dd: string;
-    yyyy: string;
-  };
-  time: {
-    hr: string;
-    min: string;
-    ampm: string;
-  };
-  [key: string]: any; // add index signature
+interface Props {
+  nameEmailHandler: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  dateTimeHandler: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => void;
+  addpeopleHandler: (num: number) => void;
+  onSubmitHandler: (e: React.FormEvent<HTMLButtonElement>) => void;
+  addPeople: number;
+  error: string;
+  isLoading: boolean;
 }
 
-const Form = () => {
-  const [addPeople, setAddPeople] = useState<number>(0);
-  const [dateTime, setDateTime] = useState<DateTime>({
-    date: {
-      mm: "",
-      dd: "",
-      yyyy: "",
-    },
-    time: {
-      hr: "",
-      min: "",
-      ampm: "",
-    },
-  });
-
-  const [error, setError] = useState("");
-
-  const [bookingData, setBookingData] = useState({
-    name: "",
-    email: "",
-    date: "",
-    time: "",
-    people: addPeople,
-  });
-
-  const addpeopleHandler = (num: number) => {
-    setAddPeople(num);
-
-    setBookingData({
-      ...bookingData,
-      people: num,
-    });
-    console.log(addPeople);
-  };
-
-  const nameEmailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-
-    setBookingData({
-      ...bookingData,
-      [e.target.name]: value,
-    });
-  };
-
-  // takes the date and time value from multiple different input elements
-  const dateTimeHandler = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const name: [string, string] = e.target.name.split(" ") as [string, string];
-    const value = e.target.value;
-
-    console.log(name, name[0], value);
-
-    setDateTime((prevState) => ({
-      ...prevState,
-      [name[0]]: {
-        ...prevState[name[0]],
-        [name[1]]: value,
-      },
-    }));
-
-    const dateStr = Object.values(dateTime.date).join("-");
-    const timeStr = `${dateTime.time.hr}:${dateTime.time.min} ${dateTime.time.ampm}`;
-
-    setBookingData({
-      ...bookingData,
-      date: dateStr,
-      time: timeStr,
-    });
-  };
-
-  const onSubmitHandler = (e: React.FormEvent) => {
-    e.preventDefault();
-    const isDateEmpty = Object.values(dateTime.date).some(
-      (value) => value === ""
-    );
-    const isTimeEmpty = Object.values(dateTime.date).some(
-      (value) => value === ""
-    );
-
-    if (
-      isDateEmpty ||
-      isTimeEmpty ||
-      bookingData.name === "" ||
-      bookingData.email === "" ||
-      bookingData.people === 0
-    ) {
-      console.log(isDateEmpty);
-      console.log(isTimeEmpty);
-
-      return setError("Make sure all the fields are filled");
-    }
-
-    postData();
-  };
-
-  const postData = async () => {
-    const { data } = await axios.post("/api/booking", bookingData);
-
-    console.log(data);
-  };
+const Form = ({
+  nameEmailHandler,
+  dateTimeHandler,
+  addpeopleHandler,
+  onSubmitHandler,
+  addPeople,
+  error,
+  isLoading,
+}: Props) => {
   return (
     <Box
       border="2px solid transparent"
@@ -199,7 +105,12 @@ const Form = () => {
               {error}
             </Text>
           ) : null}
-          <Button type="submit" onClick={onSubmitHandler} variant="solid">
+          <Button
+            isLoading={isLoading}
+            type="submit"
+            onClick={onSubmitHandler}
+            variant="solid"
+          >
             make reservation
           </Button>
         </Stack>
