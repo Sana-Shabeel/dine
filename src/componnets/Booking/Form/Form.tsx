@@ -1,15 +1,5 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Input,
-  Select,
-  Stack,
-  Text,
-  Image,
-} from "@chakra-ui/react";
-import axios from "axios";
-import React, { useState } from "react";
+import { Box, Button, Image, Input, Stack, Text } from "@chakra-ui/react";
+import React from "react";
 import AddPeople from "./AddPeople";
 import PickTime from "./PickTime";
 

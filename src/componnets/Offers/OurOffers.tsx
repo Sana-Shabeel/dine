@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Flex, Box, Heading, Text, Image, Button } from "@chakra-ui/react";
-import OfferNavbar from "./OfferNavbar";
+import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import { useState } from "react";
+import OfferNavbar from "./OfferNavbar";
 
 interface Offer {
   title: string;

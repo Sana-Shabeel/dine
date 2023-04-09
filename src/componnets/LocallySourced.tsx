@@ -1,5 +1,4 @@
-import { Flex, Box, Image, Heading, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import InfoSection from "./InfoSection";
 
 const LocallySourced = () => {

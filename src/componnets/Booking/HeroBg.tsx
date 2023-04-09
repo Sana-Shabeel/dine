@@ -1,13 +1,4 @@
-import React from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
 
 const HeroBg = () => {
   return (

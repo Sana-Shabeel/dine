@@ -1,15 +1,13 @@
 import {
-  useDisclosure,
   Button,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
   ModalBody,
+  ModalCloseButton,
+  ModalContent,
   ModalFooter,
+  ModalHeader,
+  ModalOverlay,
 } from "@chakra-ui/react";
-import React from "react";
 
 interface Props {
   title: string;
@@ -19,7 +17,6 @@ interface Props {
 }
 
 const PostDataModal = ({ title, message, Open, handleClose }: Props) => {
-  const { onOpen, onClose } = useDisclosure();
   return (
     <>
       <Modal isOpen={Open} onClose={handleClose}>

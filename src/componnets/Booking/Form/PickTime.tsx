@@ -1,14 +1,5 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Input,
-  Select,
-  Stack,
-  Text,
-  Image,
-} from "@chakra-ui/react";
+import { Flex, Input, Select, Text } from "@chakra-ui/react";
+import React from "react";
 
 interface Props {
   name1: string;

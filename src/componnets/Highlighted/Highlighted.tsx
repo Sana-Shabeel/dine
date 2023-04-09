@@ -1,7 +1,18 @@
-import { Flex, Box, Heading, Text, Image, Menu } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex } from "@chakra-ui/react";
+import data from "../../data/data.json";
 import InfoSection from "../InfoSection";
 import HighlightedMenu from "./HighlightedMenu";
+
+interface Meal {
+  title: string;
+  description: string;
+  src: {
+    md: string;
+    sm: string;
+    default: string;
+  };
+  border: boolean;
+}
 
 const Highlighted = () => {
   return (
@@ -24,9 +35,9 @@ const Highlighted = () => {
         </Box>
 
         <Box>
-          <HighlightedMenu borderB />
-          <HighlightedMenu borderB />
-          <HighlightedMenu />
+          {data.map((meal: Meal, idx: number) => (
+            <HighlightedMenu data={meal} key={idx} borderB={meal.border} />
+          ))}
         </Box>
       </Flex>
     </Box>

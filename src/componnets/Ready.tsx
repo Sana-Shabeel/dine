@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Heading, Image } from "@chakra-ui/react";
 import Link from "next/link";
-import React from "react";
 
 const Ready = () => {
   return (

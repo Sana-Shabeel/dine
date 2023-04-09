@@ -1,5 +1,5 @@
 import { Box, Flex, Image, Input, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface Props {
   increment: number;

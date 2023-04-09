@@ -1,5 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import InfoSection from "./InfoSection";
 
 const EnjoyablePlace = () => {
@@ -8,8 +7,6 @@ const EnjoyablePlace = () => {
       backgroundImage={{ md: "/assets/patterns/pattern-curve-top-right.svg" }}
       bgPos={{ md: "250% ", lg: "0 center" }}
       bgRepeat="no-repeat"
-      // border="2px solid blue"
-      // marginTop="-10%"
     >
       <Flex
         width={{ base: "20.5rem", md: "36rem", xl: "100%" }}

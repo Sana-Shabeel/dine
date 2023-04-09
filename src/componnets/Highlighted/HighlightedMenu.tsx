@@ -1,11 +1,20 @@
 import React from "react";
 import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
-
+interface Meal {
+  title: string;
+  description: string;
+  src: {
+    md: string;
+    sm: string;
+    default: string;
+  };
+}
 interface Props {
-  borderB?: Boolean;
+  borderB: Boolean;
+  data: Meal;
 }
 
-const HighlightedMenu = ({ borderB }: Props) => {
+const HighlightedMenu = ({ borderB, data }: Props) => {
   return (
     <Flex
       width={{ base: "20.5rem", md: "35.82rem", xl: "33.75rem" }}
@@ -18,20 +27,9 @@ const HighlightedMenu = ({ borderB }: Props) => {
     >
       <Flex>
         <picture>
-          <source
-            media="(min-width: 768px)"
-            srcSet="/assets/homepage/salmon-desktop-tablet.jpg 128w,
-            /assets/homepage/salmon-desktop-tablet@2x.jpg 256w"
-          />
-          <source
-            srcSet="/assets/homepage/salmon-mobile.jpg 327w,
-            /assets/homepage/salmon-mobile@2x.jpg 654w"
-          />
-          <Image
-            width={{ md: "128px" }}
-            src="/assets/homepage/salmon-mobile.jpg"
-            alt="mobile"
-          />
+          <source media="(min-width: 768px)" srcSet={data.src.md} />
+          <source srcSet={data.src.sm} />
+          <Image width={{ md: "128px" }} src={data.src.default} alt="mobile" />
         </picture>
         <Box
           display={{ base: "none", md: "unset" }}
@@ -47,12 +45,9 @@ const HighlightedMenu = ({ borderB }: Props) => {
         padding="2rem 0"
       >
         <Heading mb="0.9rem" fontSize="1.25rem">
-          Seared Salmon Fillet
+          {data.title}
         </Heading>
-        <Text>
-          Our locally sourced salmon served with a refreshing buckwheat summer
-          salad.
-        </Text>
+        <Text>{data.description}</Text>
       </Box>
     </Flex>
   );

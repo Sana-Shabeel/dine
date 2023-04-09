@@ -73,8 +73,6 @@ const PostData = () => {
     const name: [string, string] = e.target.name.split(" ") as [string, string];
     const value = e.target.value;
 
-    console.log(name, name[0], value);
-
     setDateTime((prevState) => ({
       ...prevState,
       [name[0]]: {
@@ -110,9 +108,6 @@ const PostData = () => {
       bookingData.email === "" ||
       bookingData.people === 0
     ) {
-      console.log(isDateEmpty);
-      console.log(isTimeEmpty);
-
       return setError("Make sure all the fields are filled");
     }
 
@@ -132,9 +127,8 @@ const PostData = () => {
         isLoading: false,
       });
     }
-
-    console.log(data);
   };
+
   return (
     <>
       <PostDataModal
