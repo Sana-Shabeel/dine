@@ -8,6 +8,7 @@ import {
   Text,
   Image,
 } from "@chakra-ui/react";
+import axios from "axios";
 import React, { useState } from "react";
 import AddPeople from "./AddPeople";
 import PickTime from "./PickTime";
@@ -119,11 +120,14 @@ const Form = () => {
       return setError("Make sure all the fields are filled");
     }
 
-    // console.log("not", hasEmptyValue);
-
-    console.log(bookingData);
+    postData();
   };
 
+  const postData = async () => {
+    const { data } = await axios.post("/api/booking", bookingData);
+
+    console.log(data);
+  };
   return (
     <Box
       border="2px solid transparent"
