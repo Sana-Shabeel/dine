@@ -1,9 +1,7 @@
-import React from "react";
-import { League_Spartan } from "next/font/google";
-import HeroBg from "@/componnets/Booking/HeroBg";
-import Form from "@/componnets/Booking/Form/Form";
-import Footer from "@/componnets/Footer";
 import PostData from "@/componnets/Booking/Form/PostData";
+import HeroBg from "@/componnets/Booking/HeroBg";
+import Footer from "@/componnets/Footer";
+import { League_Spartan } from "next/font/google";
 
 const LeagueSpartan = League_Spartan({ subsets: ["latin"] });
 
