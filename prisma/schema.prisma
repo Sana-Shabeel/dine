@@ -16,5 +16,5 @@ model Booking {
   email String
   date String
   time String
-  people String
+  people Int
 }
