@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Seared Salmon Fillet",
+    "description": "Our locally sourced salmon served with a refreshing buckwheat summer salad",
+    "src": {
+      "md": "/assets/homepage/salmon-desktop-tablet.jpg 128w, /assets/homepage/salmon-desktop-tablet@2x.jpg 256w",
+      "sm": "/assets/homepage/salmon-mobile.jpg 327w, /assets/homepage/salmon-mobile@2x.jpg 654w",
+      "default": "/assets/homepage/salmon-mobile@2x.jpg"
+    },
+    "border": true
+  },
+  {
+    "title": "Rosemary Filet Mignon",
+    "description": "Our prime beef served to your taste with a delicious choice of seasonal sides.",
+    "src": {
+      "md": "/assets/homepage/beef-desktop-tablet.jpg 128w, /assets/homepage/beef-desktop-tablet@2x.jpg 256w",
+      "sm": "/assets/homepage/beef-mobile.jpg 327w, /assets/homepage/beef-mobile@2x.jpg 654w",
+      "default": "/assets/homepage/beef-mobile@2x.jpg"
+    },
+    "border": true
+  },
+  {
+    "title": "Summer Fruit Chocolate Mousse",
+    "description": "Creamy mousse combined with summer fruits and dark chocolate shavings.",
+    "src": {
+      "md": "/assets/homepage/chocolate-desktop-tablet.jpg 128w, /assets/homepage/chocolate-desktop-tablet@2x.jpg 256w",
+      "sm": "/assets/homepage/chocolate-mobile.jpg 327w, /assets/homepage/chocolate-mobile@2x.jpg 654w",
+      "default": "/assets/homepage/chocolate-mobile@2x.jpg"
+    },
+    "border": false
+  }
+]
