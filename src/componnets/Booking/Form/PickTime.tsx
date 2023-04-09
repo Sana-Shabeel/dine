@@ -61,7 +61,7 @@ const PickTime = ({
             textAlign="center"
             name="time ampm"
             onChange={dateTimeHandler}
-            value={placeholder3}
+            defaultValue="AM"
           >
             <option value="AM">AM</option>
             <option value="PM">PM</option>
