@@ -27,7 +27,7 @@ const PickTime = ({
   return (
     <Flex gap="1rem" flexDirection={{ base: "column", md: "row" }}>
       <Text width={{ base: "100%", md: "40%" }} fontSize="1.25rem">
-        Pick a time
+        Pick a {time ? "time" : "date"}
       </Text>
       <Flex gap="1rem" width={{ base: "100%", md: "50%" }}>
         <Input
